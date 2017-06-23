@@ -1,8 +1,8 @@
 package api
 
 import (
-	log "github.com/Sirupsen/logrus"
-	mgo "gopkg.in/mgo.v2"
+	log "github.com/sirupsen/logrus"
+	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
 

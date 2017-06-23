@@ -3,11 +3,11 @@ package web
 import (
 	"net/http"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/hellofresh/janus/pkg/api"
 	"github.com/hellofresh/janus/pkg/errors"
 	"github.com/hellofresh/janus/pkg/health"
 	"github.com/hellofresh/janus/pkg/response"
+	log "github.com/sirupsen/logrus"
 )
 
 // Home handler is just a nice home page message
@@ -28,7 +28,7 @@ func RecoveryHandler(w http.ResponseWriter, r *http.Request, err interface{}) {
 	switch internalErr := err.(type) {
 	case *errors.Error:
 		log.WithFields(log.Fields{"code": internalErr.Code, "error": internalErr.Error()}).
-			Warning("Internal error hadled")
+			Warning("Internal error handled")
 		response.JSON(w, internalErr.Code, internalErr.Error())
 	default:
 		log.WithField("error", err).Error("Internal server error handled")

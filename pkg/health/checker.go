@@ -3,8 +3,8 @@ package health
 import (
 	"net/http"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/hellofresh/janus/pkg/api"
+	log "github.com/sirupsen/logrus"
 )
 
 const (

@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/hellofresh/janus/pkg/router"
-	stats "github.com/hellofresh/stats-go"
+	"github.com/hellofresh/stats-go"
+	log "github.com/sirupsen/logrus"
 )
 
 const (

@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"net/http"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/hellofresh/janus/pkg/api"
 	"github.com/hellofresh/janus/pkg/config"
 	"github.com/hellofresh/janus/pkg/jwt"
@@ -14,6 +13,7 @@ import (
 	"github.com/hellofresh/janus/pkg/router"
 	chimiddleware "github.com/pressly/chi/middleware"
 	"github.com/rs/cors"
+	log "github.com/sirupsen/logrus"
 )
 
 // Provider is a provider.Provider implementation that provides the REST API.

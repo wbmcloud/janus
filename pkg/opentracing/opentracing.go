@@ -2,19 +2,13 @@ package opentracing
 
 import (
 	"context"
-
 	"net/http"
 
-	log "github.com/Sirupsen/logrus"
-	gcloudtracer "github.com/hellofresh/gcloud-opentracing"
+	"github.com/hellofresh/gcloud-opentracing"
 	"github.com/hellofresh/janus/pkg/config"
 	"github.com/hellofresh/janus/pkg/opentracing/appdash"
-	opentracing "github.com/opentracing/opentracing-go"
-)
-
-const (
-	// CtxSpanID is used to store the SpanID in a request's context
-	CtxSpanID = 0
+	"github.com/opentracing/opentracing-go"
+	log "github.com/sirupsen/logrus"
 )
 
 // Build a tracer based on the configuration provided

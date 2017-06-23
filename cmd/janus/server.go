@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"net/url"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/hellofresh/janus/pkg/api"
 	"github.com/hellofresh/janus/pkg/errors"
 	"github.com/hellofresh/janus/pkg/loader"
@@ -15,8 +14,9 @@ import (
 	"github.com/hellofresh/janus/pkg/proxy"
 	"github.com/hellofresh/janus/pkg/router"
 	"github.com/hellofresh/janus/pkg/web"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	mgo "gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2"
 )
 
 var (
@@ -28,7 +28,9 @@ var (
 // RunServer is the run command to start Janus
 func RunServer(cmd *cobra.Command, args []string) {
 	log.WithField("version", version).Info("Janus starting...")
+
 	defer statsClient.Close()
+	defer globalConfig.Log.Flush()
 
 	if subscriber, ok := storage.(notifier.Subscriber); ok {
 		listener := notifier.NewNotificationListener(subscriber)
