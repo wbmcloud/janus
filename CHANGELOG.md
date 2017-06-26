@@ -1,13 +1,14 @@
-# Unrealeased
+# Unreleased
 
 ## Changed
 
 - Moved Concourse CI scripts to another repo
+- Bumped Chi router to 3.0, see [changelog](https://github.com/go-chi/chi/blob/master/CHANGELOG.md) if you're using parametrised urls
 
 ## Added
 
 - Added plugin to transform a request to an upstream. You can now modify headers and query string before the request is sent
-- Added godog for behaviour tests
+- Added [`godog`](https://github.com/DATA-DOG/godog) for behaviour tests
 - Allow insecure upstream SSL certificate
 
 # 3.0.0
