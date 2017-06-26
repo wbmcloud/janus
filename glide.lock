@@ -1,12 +1,12 @@
-hash: f6ca9c11f4957e051bd674d3a5c4f7c639093216904678fb3085f6ae8855e6ec
-updated: 2017-06-23T19:06:54.979637664+02:00
+hash: 18603680e1a6f384ccf37a6df3bb46aabb799e9476308c6a47e191e231cec3f1
+updated: 2017-06-26T11:06:29.855543062+02:00
 imports:
 - name: cloud.google.com/go
   version: 9d0d2cf2897dfcd18a86e1666038caf1c38e77f8
   subpackages:
   - compute/metadata
 - name: github.com/ant0ine/go-json-rest
-  version: 4602b00d2caab423578a3094c68137dcc1eb2051
+  version: 4127f183c172b25f51dbaaa2e035e8f262ac57fb
   subpackages:
   - rest
   - rest/trie
@@ -32,6 +32,10 @@ imports:
   subpackages:
   - internal
   - redis
+- name: github.com/go-chi/chi
+  version: 967844826e58cf31213a7dfb82455d242ad85101
+  subpackages:
+  - middleware
 - name: github.com/gogo/protobuf
   version: efccd33a0c20aa078705571d5ddbfa14c8395a63
   subpackages:
@@ -89,13 +93,9 @@ imports:
 - name: github.com/pelletier/go-buffruneio
   version: c37440a7cf42ac63b919c752ca73a85067e05992
 - name: github.com/pelletier/go-toml
-  version: fe7536c3dee2596cdd23ee9976a17c22bdaae286
+  version: 4a000a21a414d139727f616a8bb97f847b1b310b
 - name: github.com/pkg/errors
   version: c605e284fe17294bda444b34710735b29d1a9d90
-- name: github.com/pressly/chi
-  version: e6033ea75479391a4bce3918fc119cad31e1cb30
-  subpackages:
-  - middleware
 - name: github.com/rs/cors
   version: 8dd4211afb5d08dbb39a533b9bb9e4b486351df6
 - name: github.com/sirupsen/logrus
@@ -109,7 +109,7 @@ imports:
 - name: github.com/spf13/cast
   version: acbeb36b902d72a7a4c18e8f3241075e7ab763e4
 - name: github.com/spf13/cobra
-  version: e458bb7ab84aae1bb4b4d36eccf9332f0d659e38
+  version: 4d647c8944eb42504a714e57e97f244ed6344722
 - name: github.com/spf13/jwalterweatherman
   version: 0efa5202c04663c757d84f90f5219c1250baf94f
 - name: github.com/spf13/pflag
@@ -123,7 +123,7 @@ imports:
 - name: github.com/ulule/limiter
   version: c242da0b4c9524723c5a2dc8e7d49c228d1bb33c
 - name: golang.org/x/net
-  version: 30f03014b4f11f9f238fdeca8cca734746a24fbb
+  version: 5f8847ae0d0e90b6a9dc8148e7ad616874625171
   subpackages:
   - context
   - context/ctxhttp
